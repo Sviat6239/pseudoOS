@@ -1,12 +1,17 @@
-user_input = ""
+from coreUtils import *
 
-print("Kernel loaded succesfull")
+core_version = "0.0.1"
+
+print("Kernel loaded successfully")
 
 while True:
-    user_input = input(">>>")
+    user_input = input(">>>").strip().lower()
 
-    if user_input == "help" or "h" or "-h":
-        print("List of comannds: ")
-
-    if user_input == "about" or "-about":
-        print("this is a simple terminal operationg system that written in Python Programming language.")    
+    if user_input in ("help", "h"):
+        Help()
+    elif user_input in ("about",):
+        About()
+    elif user_input in ("version", "ver", "v"):
+        print(core_version)
+    else:
+        print("Unknown command, try help.")
