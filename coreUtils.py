@@ -7,3 +7,6 @@ def Help():
 
 def About():
     print("About")
+
+def Poweroff():
+    run = False
